@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  h1= title
+  p My Movies
+  img(src="./images/main.jpg")
+  ul
+    each m in movies
+      li
+        a(href=`/movies/${m._id}`)= m.name
+        
+  a(href=`/new`) Create New Movie  
